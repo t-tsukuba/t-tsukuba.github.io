@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - Tatsuki Tsukuba</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --accent: #1a5c96;
+      --text: #1a1a1a;
+      --muted: #5a5a5a;
+      --border: #e0ddd8;
+      --bg: #fafaf8;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .layout {
+      display: flex;
+      min-height: 100vh;
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 40px 24px;
+    }
+
+    /* ---- Sidebar ---- */
+    .sidebar {
+      width: 220px;
+      flex-shrink: 0;
+      padding-right: 40px;
+    }
+
+    .site-title {
+      font-family: 'EB Garamond', serif;
+      font-size: 17px;
+      font-weight: 500;
+      margin-bottom: 28px;
+      letter-spacing: 0.01em;
+    }
+
+    nav ul { list-style: none; }
+    nav li { margin-bottom: 4px; }
+    nav a {
+      font-size: 13.5px;
+      color: var(--muted);
+      letter-spacing: 0.02em;
+    }
+    nav a:hover,
+    nav a.active {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    nav a.active { font-weight: 500; }
+
+    .profile-img {
+      width: 88px;
+      height: 88px;
+      border-radius: 50%;
+      background: var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 28px 0 14px;
+      overflow: hidden;
+    }
+
+    .profile-name {
+      font-family: 'EB Garamond', serif;
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 2px;
+    }
+
+    .profile-pos {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    .sidebar-links { font-size: 12.5px; }
+    .sidebar-links a {
+      display: block;
+      color: var(--muted);
+      margin-bottom: 3px;
+    }
+    .sidebar-links a:hover {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    /* ---- Main ---- */
+    .main { flex: 1; min-width: 0; }
+
+    h1 {
+      font-family: 'EB Garamond', serif;
+      font-size: 26px;
+      font-weight: 500;
+      margin-bottom: 16px;
+      letter-spacing: 0.01em;
+    }
+
+    h2 {
+      font-family: 'EB Garamond', serif;
+      font-size: 18px;
+      font-weight: 500;
+      margin: 32px 0 12px;
+      padding-bottom: 4px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    p { margin-bottom: 12px; color: #2a2a2a; }
+
+    .about-interests p { margin-bottom: 6px; }
+    .about-interests ul {
+      list-style: disc;
+      padding-left: 22px;
+      margin-bottom: 12px;
+    }
+    .about-interests li {
+      font-size: 15px;
+      margin-bottom: 2px;
+      color: #2a2a2a;
+    }
+
+    .links-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-top: 8px;
+    }
+
+    .link-group h3 {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--muted);
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .link-group ul { list-style: none; }
+    .link-group li { margin-bottom: 5px; font-size: 14px; }
+
+    /* ---- Responsive ---- */
+    @media (max-width: 560px) {
+      .layout {
+        flex-direction: column;
+        padding: 24px 16px;
+      }
+      .sidebar {
+        width: 100%;
+        padding-right: 0;
+        padding-bottom: 28px;
+        border-bottom: 1px solid var(--border);
+        margin-bottom: 28px;
+      }
+      .links-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="layout">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="site-title">Tatsuki Tsukuba</div>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="active">About</a></li>
+        </ul>
+      </nav>
+
+      <div class="profile-img">
+        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="24" cy="18" r="9" fill="#aaa"/>
+          <path d="M6 42c0-9.94 8.06-18 18-18s18 8.06 18 18" fill="#aaa"/>
+        </svg>
+      </div>
+      <div class="profile-name">Tatsuki Tsukuba</div>
+      <div class="profile-pos">D1 Student</div>
+
+      <div class="sidebar-links">
+        <a href="https://www.kanazawa-u.ac.jp/" target="_blank" rel="noopener">U-Kanazawa</a>
+        <a href="mailto:tsukubaaa@stu.kanazawa-u.ac.jp">Email</a>
+        <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </aside>
+
+    <!-- Main -->
+    <main class="main">
+      <h1>About</h1>
+
+      <div class="about-interests">
+        <p>筑波龍生です。金沢大学の院生です。</p>
+        <p>I am a student at the University of Kanazawa.</p>
+        <p>I'm interested in</p>
+        <ul>
+          <li>Polymer Science &amp; Materials Mechanics,</li>
+          <li>Raman Spectroscopy &amp; In-situ Measurement,</li>
+          <li>Fatigue, Fracture &amp; Degradation,</li>
+          <li>Rheology &amp; Viscoelasticity,</li>
+          <li>Data Science &amp; Machine Learning,</li>
+        </ul>
+        <p>etc.</p>
+      </div>
+
+      <h2>Links</h2>
+      <div class="links-grid">
+        <div class="link-group">
+          <h3>Contact</h3>
+          <ul>
+            <li><a href="mailto:tsukubaaa@stu.kanazawa-u.ac.jp">tsukubaaa@stu.kanazawa-u.ac.jp</a></li>
+          </ul>
+        </div>
+        <div class="link-group">
+          <h3>External</h3>
+          <ul>
+            <li><a href="https://github.com/" target="_blank" rel="noopener">GitHub</a></li>
+          </ul>
+        </div>
+      </div>
+    </main>
+
+  </div>
+</body>
+</html>
