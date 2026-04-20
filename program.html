@@ -19,18 +19,41 @@ body {
 a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
-.wrapper { max-width: 900px; margin: 0 auto; padding: 0 30px; }
+/* 濱口さんと同じ: 全体をmax-width+margin:autoで囲む */
+.page-wrap {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
 
-.topnav-bar { border-bottom: 1px solid var(--border); background: var(--bg); }
-.topnav-inner { max-width: 900px; margin: 0 auto; padding: 18px 30px; display: flex; align-items: center; }
-.topnav-inner .logo { font-size: 20px; font-weight: 700; color: var(--text); margin-right: auto; }
-.topnav-inner .logo:hover { text-decoration: none; }
-.topnav-inner nav { display: flex; gap: 28px; }
-.topnav-inner nav a { font-size: 15px; color: var(--muted); }
-.topnav-inner nav a:hover, .topnav-inner nav a.active { color: var(--accent); text-decoration: none; }
-.topnav-inner nav a.active { font-weight: 600; }
+/* topnav: page-wrap の中に入れて左端を揃える */
+.topnav {
+  border-bottom: 1px solid var(--border);
+  background: var(--bg);
+}
+.topnav .page-wrap {
+  display: flex;
+  align-items: center;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+.topnav .logo { font-size: 20px; font-weight: 700; color: var(--text); margin-right: auto; }
+.topnav .logo:hover { text-decoration: none; }
+.topnav nav { display: flex; gap: 28px; }
+.topnav nav a { font-size: 15px; color: var(--muted); }
+.topnav nav a:hover, .topnav nav a.active { color: var(--accent); text-decoration: none; }
+.topnav nav a.active { font-weight: 600; }
 
-.layout { display: flex; padding-top: 48px; padding-bottom: 48px; gap: 48px; }
+/* コンテンツ: page-wrap の中にflex */
+.content-wrap {
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+.layout {
+  display: flex;
+  gap: 48px;
+}
+
 .sidebar { width: 210px; flex-shrink: 0; }
 .main { flex: 1; min-width: 0; }
 
@@ -58,9 +81,7 @@ p { margin-bottom: 14px; color: #222; font-size: 17px; }
 .coming-soon .label { font-size: 24px; font-weight: 700; color: #bbb; margin-bottom: 8px; }
 
 @media (max-width: 640px) {
-  .topnav-inner { padding: 14px 16px; }
-  .topnav-inner nav { gap: 14px; }
-  .wrapper { padding: 0 16px; }
+  .page-wrap { padding: 0 16px; }
   .layout { flex-direction: column; gap: 28px; }
   .sidebar { width: 100%; }
   .links-section { grid-template-columns: 1fr; }
@@ -68,16 +89,16 @@ p { margin-bottom: 14px; color: #222; font-size: 17px; }
 </style>
 </head>
 <body>
-<div class="topnav-bar">
-  <div class="topnav-inner">
+<nav class="topnav">
+  <div class="page-wrap">
     <a href="index.html" class="logo">Tatsuki Tsukuba</a>
-    <nav><a href="index.html" class="">About</a>
+    <div class="nav"><a href="index.html" class="">About</a>
 <a href="program.html" class="active">Program</a>
 <a href="diary.html" class="">Diary</a>
-<a href="blog.html" class="">Blog</a></nav>
+<a href="blog.html" class="">Blog</a></div>
   </div>
-</div>
-<div class="wrapper">
+</nav>
+<div class="page-wrap content-wrap">
   <div class="layout">
     
 <aside class="sidebar">
